@@ -299,7 +299,14 @@ a:focus {
 .bg-black-50 {
   background: #181a23;
 }
-
+#navbar {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.479
+  ); /* Change this value to adjust opacity */
+}
 .navbar-nav li {
   padding: 0px 10px;
 }
@@ -454,7 +461,7 @@ ul.dropdown-menu li {
 }
 
 .mt-80px {
-  margin-top: -80px;
+  margin-top: -85px;
 }
 
 .number {
@@ -647,6 +654,53 @@ ul.dropdown-menu li {
   border: 2px solid #eee;
 }
 
+/* Center copyright text and social icons in one row on small screens */
+@media (max-width: 576px) {
+  .footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all content horizontally */
+    text-align: center; /* Center text within each element */
+  }
+
+  .footer .row {
+    flex-direction: column; /* Stack footer rows vertically */
+    align-items: center;
+  }
+
+  .footer .btn-main {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0; /* Center-align and add spacing around the button */
+  }
+
+  .footer .footer-socials {
+    display: flex;
+    justify-content: center; /* Center-align social icons */
+    padding-top: 10px; /* Adjust spacing for social icons */
+  }
+
+  .footer .footer-socials li {
+    margin: 0 5px; /* Add space between icons */
+  }
+
+  .footer .footer-socials li a i {
+    font-size: 15px; /* Smaller icon size for mobile */
+  }
+
+  /* Center copyright text and social icons in one row */
+  .footer .copyright-container {
+    display: flex; /* Use flexbox to align items in one row */
+    justify-content: center; /* Center align items */
+    align-items: center; /* Vertically align items */
+    margin-top: 15px; /* Spacing above the copyright row */
+  }
+
+  .footer .copyright-container p {
+    margin: 0 0px; /* Space between copyright text and icons */
+  }
+}
+
 .footer {
   padding-top: 90px;
   padding-bottom: 45px;
@@ -784,6 +838,16 @@ ul.dropdown-menu li {
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
+
+/* Center the resume button on small screens */
+@media (max-width: 576px) {
+  .btn-main {
+    display: block; /* Make the button a block element */
+    margin: 20px auto; /* Center the button with automatic margins */
+    text-align: center; /* Ensure text inside button is centered */
+  }
+}
+
 .resume .resume-title {
   color: var(--heading-color);
   font-size: 26px;
