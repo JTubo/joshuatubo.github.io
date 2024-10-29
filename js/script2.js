@@ -19,5 +19,8 @@ function sendMail() {
     .then((res) => {
       alert("Email send successfully!");
     })
-    .catch();
+    .catch((error) => {
+      alert("Failed to send email. Please try again later.");
+      console.error("Error:", error);
+    });
 }
