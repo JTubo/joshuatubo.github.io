@@ -1,16 +1,24 @@
+body {
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  border: none; /* Ensures no border is applied */
+  overflow: hidden; /* Prevent scrolling during preloader visibility */
+}
+
 #preloader {
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: #000000;
-  z-index: 9999;
+  background-color: #000000; /* Background color */
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9999; /* Ensure it's on top of other content */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for sliding and fading */
+  opacity: 1; /* Initial opacity */
 }
-
 .loader {
   position: relative;
   width: 64px;
@@ -18,6 +26,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   transform: rotate(45deg);
   overflow: hidden;
+  margin: 0 auto; /* Center the loader */
 }
 
 .loader:after {
@@ -46,4 +55,9 @@
   100% {
     transform: translate(0px, 0px) rotate(-45deg);
   }
+}
+
+#preloader.hide {
+  opacity: 0;
+  transform: translateY(-100%);
 }
